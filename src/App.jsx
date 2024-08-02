@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { quotes } from "./quotes.json";
+import twitterLogo from "./assets/twitter.png"
 
 function App() {
   const [quote, setQuote] = useState({
@@ -36,7 +37,7 @@ function App() {
             href={`https://twitter.com/intent/tweet?text="${quote.quote}"%20-${quote.author}+%23quotes`}
             target="_blank"
           >
-            <img src="src\assets\twitter.png" alt="twitter" id="twitter-logo" />
+            <img src={twitterLogo} alt="twitter" id="twitter-logo" />
           </a>
           <button id="new-quote" onClick={chooseQuote}>
             {"New Quote"}
